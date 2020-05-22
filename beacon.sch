@@ -1408,7 +1408,7 @@
 <part name="GND23" library="radio-tracker" deviceset="GND" device=""/>
 <part name="P+13" library="radio-tracker" deviceset="+3V3" device=""/>
 <part name="D1" library="radio-tracker" deviceset="LED" device=""/>
-<part name="R13" library="radio-tracker" deviceset="RESISTOR" device="0603" value="0R"/>
+<part name="R13" library="radio-tracker" deviceset="RESISTOR" device="0603" value="TBD"/>
 <part name="P+14" library="radio-tracker" deviceset="+3V3" device=""/>
 <part name="Z1" library="radio-tracker" deviceset="ABT-8" device="" package3d_urn="urn:adsk.eagle:package:18040019/1"/>
 <part name="GND24" library="radio-tracker" deviceset="GND" device=""/>
@@ -1959,6 +1959,11 @@
 <wire x1="12.7" y1="0" x2="25.4" y2="0" width="0.1524" layer="91"/>
 <label x="15.24" y="0" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="5"/>
+<wire x1="66.04" y1="5.08" x2="48.26" y2="5.08" width="0.1524" layer="91"/>
+<label x="48.26" y="5.08" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="VBAT" class="0">
 <segment>
@@ -1981,13 +1986,6 @@
 <wire x1="66.04" y1="10.16" x2="48.26" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="P+7" gate="G$1" pin="+9V"/>
 <wire x1="48.26" y1="10.16" x2="48.26" y2="17.78" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="DETECT" class="0">
-<segment>
-<pinref part="J1" gate="G$1" pin="5"/>
-<wire x1="66.04" y1="5.08" x2="48.26" y2="5.08" width="0.1524" layer="91"/>
-<label x="48.26" y="5.08" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
