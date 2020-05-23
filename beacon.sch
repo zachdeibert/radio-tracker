@@ -298,7 +298,7 @@
 <smd name="3" x="1" y="0" dx="0.9" dy="0.8" layer="1"/>
 <text x="0" y="2.6536" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
 </package>
-<package name="WT-1205" urn="urn:adsk.eagle:footprint:18040049/1" locally_modified="yes">
+<package name="AT-1224-TWT-5V-2-R" urn="urn:adsk.eagle:footprint:18040049/1" locally_modified="yes">
 <description>Radial Non-Polarized Capacitor, 6.50 mm pitch, 12.00 mm body diameter, 9.50 mm body height
 &lt;p&gt;Radial Non-Polarized Capacitor package with 6.50 mm pitch (lead spacing), 0.70 mm lead diameter, 12.00 mm body diameter and 9.50 mm body height&lt;/p&gt;</description>
 <circle x="0" y="0" radius="6" width="0.12" layer="21"/>
@@ -485,7 +485,7 @@
 <description>Radial Non-Polarized Capacitor, 6.50 mm pitch, 12.00 mm body diameter, 9.50 mm body height
 &lt;p&gt;Radial Non-Polarized Capacitor package with 6.50 mm pitch (lead spacing), 0.70 mm lead diameter, 12.00 mm body diameter and 9.50 mm body height&lt;/p&gt;</description>
 <packageinstances>
-<packageinstance name="WT-1205"/>
+<packageinstance name="AT-1224-TWT-5V-2-R"/>
 </packageinstances>
 </package3d>
 <package3d name="SOP50P490X110-10N" urn="urn:adsk.eagle:package:17690551/1" type="model">
@@ -677,7 +677,7 @@
 <wire x1="-2.54" y1="0" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="-5.08" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
 </symbol>
-<symbol name="WT-1205">
+<symbol name="AT-1224-TWT-5V-2-R">
 <wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
 <wire x1="0" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
 <wire x1="2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
@@ -1157,12 +1157,12 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="WT-1205" prefix="LS">
+<deviceset name="AT-1224-TWT-5V-2-R" prefix="LS">
 <gates>
-<gate name="G$1" symbol="WT-1205" x="0" y="0"/>
+<gate name="G$1" symbol="AT-1224-TWT-5V-2-R" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="WT-1205">
+<device name="" package="AT-1224-TWT-5V-2-R">
 <connects>
 <connect gate="G$1" pin="P$1" pad="1"/>
 <connect gate="G$1" pin="P$2" pad="2"/>
@@ -1396,7 +1396,7 @@
 <part name="GND19" library="radio-tracker" deviceset="GND" device=""/>
 <part name="R12" library="radio-tracker" deviceset="RESISTOR" device="0603" value="1M"/>
 <part name="C14" library="radio-tracker" deviceset="CAPACITOR" device="0603" value="0.1uF"/>
-<part name="LS1" library="radio-tracker" deviceset="WT-1205" device="" package3d_urn="urn:adsk.eagle:package:18040044/1"/>
+<part name="LS1" library="radio-tracker" deviceset="AT-1224-TWT-5V-2-R" device="" package3d_urn="urn:adsk.eagle:package:18040044/1"/>
 <part name="GND20" library="radio-tracker" deviceset="GND" device=""/>
 <part name="P+12" library="radio-tracker" deviceset="+5V" device=""/>
 <part name="U5" library="radio-tracker" deviceset="SI4012" device="" package3d_urn="urn:adsk.eagle:package:17690551/1"/>
