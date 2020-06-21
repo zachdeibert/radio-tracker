@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1.27" unitdist="mm" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="yes" active="yes"/>
@@ -81,7 +81,7 @@
 <package name="0805">
 <smd name="P$1" x="-0.9525" y="0" dx="1.2954" dy="0.7112" layer="1" rot="R90"/>
 <smd name="P$2" x="0.9525" y="0" dx="1.2954" dy="0.7112" layer="1" rot="R90"/>
-<text x="0" y="0.8636" size="0.254" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="0.8636" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
 <wire x1="-1.524" y1="0.762" x2="1.524" y2="0.762" width="0.0762" layer="21"/>
 <wire x1="1.524" y1="0.762" x2="1.524" y2="-0.762" width="0.0762" layer="21"/>
 <wire x1="1.524" y1="-0.762" x2="-1.524" y2="-0.762" width="0.0762" layer="21"/>
@@ -357,7 +357,7 @@
 <wire x1="13" y1="0" x2="13" y2="8" width="0.127" layer="20"/>
 <rectangle x1="-13" y1="0" x2="13" y2="8" layer="29"/>
 <rectangle x1="-13" y1="0" x2="13" y2="8" layer="30"/>
-<text x="0" y="8.5" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="8.5" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
 </package>
 <package name="JUMPER" urn="urn:adsk.eagle:footprint:18040529/1" locally_modified="yes">
 <description>Single-row, 2-pin Pin Header (Male) Straight, 2.54 mm (0.10 in) col pitch, 5.84 mm mating length, 5.08 X 2.54 X 8.38 mm body
@@ -376,19 +376,21 @@
 <text x="0" y="2.659" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
 </package>
 <package name="ANTENNA">
-<smd name="P$1" x="0" y="5" dx="8" dy="10" layer="1" cream="no"/>
-<smd name="P$2" x="0" y="5" dx="8" dy="10" layer="16" cream="no"/>
-<wire x1="-8" y1="10" x2="-8" y2="0" width="0.127" layer="20"/>
-<wire x1="-8" y1="0" x2="8" y2="0" width="0.127" layer="20"/>
-<wire x1="8" y1="0" x2="8" y2="10" width="0.127" layer="20"/>
+<smd name="LT" x="-4.5" y="5" dx="8" dy="10" layer="1" cream="no"/>
+<smd name="LB" x="-4.5" y="5" dx="8" dy="10" layer="16" cream="no"/>
+<wire x1="-8.5" y1="10" x2="-8.5" y2="0" width="0.127" layer="20"/>
+<wire x1="-8.5" y1="0" x2="8.5" y2="0" width="0.127" layer="20"/>
+<wire x1="8.5" y1="0" x2="8.5" y2="10" width="0.127" layer="20"/>
 <text x="0" y="11" size="0.8128" layer="25" align="top-center">&gt;NAME</text>
 <rectangle x1="-8" y1="0" x2="8" y2="10" layer="29"/>
 <rectangle x1="-8" y1="0" x2="8" y2="10" layer="30"/>
+<smd name="RB" x="4.5" y="5" dx="8" dy="10" layer="16" cream="no"/>
+<smd name="RT" x="4.5" y="5" dx="8" dy="10" layer="1" cream="no"/>
 </package>
 <package name="0603">
 <smd name="P$1" x="-0.75" y="0" dx="0.9" dy="0.6" layer="1" rot="R90"/>
 <smd name="P$2" x="0.75" y="0" dx="0.9" dy="0.6" layer="1" rot="R90"/>
-<text x="0" y="0.8636" size="0.254" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0" y="0.8636" size="0.8128" layer="25" align="bottom-center">&gt;NAME</text>
 <wire x1="-0.775" y1="0.425" x2="0.775" y2="0.425" width="0.0762" layer="21"/>
 <wire x1="0.775" y1="0.425" x2="0.775" y2="-0.425" width="0.0762" layer="21"/>
 <wire x1="0.775" y1="-0.425" x2="-0.775" y2="-0.425" width="0.0762" layer="21"/>
@@ -2087,8 +2089,8 @@
 <devices>
 <device name="" package="ANTENNA">
 <connects>
-<connect gate="G$1" pin="P$1" pad="P$1"/>
-<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="P$1" pad="LB LT"/>
+<connect gate="G$1" pin="P$2" pad="RB RT"/>
 </connects>
 <technologies>
 <technology name=""/>
