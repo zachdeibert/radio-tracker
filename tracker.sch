@@ -3464,22 +3464,17 @@
 </net>
 <net name="SLAVE_SDA" class="0">
 <segment>
-<pinref part="J2" gate="G$1" pin="9"/>
-<wire x1="15.24" y1="-5.08" x2="-7.62" y2="-5.08" width="0.1524" layer="91"/>
-<label x="-7.62" y="-5.08" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="J3" gate="G$1" pin="MOSI"/>
 <wire x1="38.1" y1="38.1" x2="20.32" y2="38.1" width="0.1524" layer="91"/>
 <label x="22.86" y="38.1" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="7"/>
+<wire x1="15.24" y1="0" x2="-7.62" y2="0" width="0.1524" layer="91"/>
+<label x="-7.62" y="0" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SLAVE_MISO" class="0">
-<segment>
-<pinref part="J2" gate="G$1" pin="8"/>
-<wire x1="-7.62" y1="-2.54" x2="15.24" y2="-2.54" width="0.1524" layer="91"/>
-<label x="-7.62" y="-2.54" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="J3" gate="G$1" pin="MISO"/>
 <wire x1="-7.62" y1="40.64" x2="-25.4" y2="40.64" width="0.1524" layer="91"/>
@@ -3490,44 +3485,37 @@
 <wire x1="15.24" y1="-30.48" x2="-2.54" y2="-30.48" width="0.1524" layer="91"/>
 <label x="-2.54" y="-30.48" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="SLAVE_SCL" class="0">
-<segment>
-<pinref part="J2" gate="G$1" pin="7"/>
-<wire x1="15.24" y1="0" x2="-7.62" y2="0" width="0.1524" layer="91"/>
-<label x="-7.62" y="0" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="J3" gate="G$1" pin="SCK"/>
-<wire x1="-25.4" y1="38.1" x2="-7.62" y2="38.1" width="0.1524" layer="91"/>
-<label x="-25.4" y="38.1" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="!SLAVE_RESET" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="6"/>
 <wire x1="-7.62" y1="2.54" x2="15.24" y2="2.54" width="0.1524" layer="91"/>
 <label x="-7.62" y="2.54" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="J3" gate="G$1" pin="!RST"/>
-<wire x1="-7.62" y1="35.56" x2="-25.4" y2="35.56" width="0.1524" layer="91"/>
-<label x="-25.4" y="35.56" size="1.778" layer="95"/>
-</segment>
 </net>
-<net name="SLAVE_BUZZER" class="0">
+<net name="SLAVE_SCL" class="0">
+<segment>
+<pinref part="J3" gate="G$1" pin="SCK"/>
+<wire x1="-25.4" y1="38.1" x2="-7.62" y2="38.1" width="0.1524" layer="91"/>
+<label x="-25.4" y="38.1" size="1.778" layer="95"/>
+</segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="5"/>
 <wire x1="15.24" y1="5.08" x2="-7.62" y2="5.08" width="0.1524" layer="91"/>
 <label x="-7.62" y="5.08" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SLAVE_VBAT" class="0">
+<net name="!SLAVE_RESET" class="0">
 <segment>
-<pinref part="J2" gate="G$1" pin="4"/>
-<wire x1="-7.62" y1="7.62" x2="15.24" y2="7.62" width="0.1524" layer="91"/>
-<label x="-7.62" y="7.62" size="1.778" layer="95"/>
+<pinref part="J3" gate="G$1" pin="!RST"/>
+<wire x1="-7.62" y1="35.56" x2="-25.4" y2="35.56" width="0.1524" layer="91"/>
+<label x="-25.4" y="35.56" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="9"/>
+<wire x1="15.24" y1="-5.08" x2="-7.62" y2="-5.08" width="0.1524" layer="91"/>
+<label x="-7.62" y="-5.08" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SLAVE_VBAT" class="0">
 <segment>
 <pinref part="Q2" gate="G$1" pin="DC+"/>
 <wire x1="83.82" y1="43.18" x2="101.6" y2="43.18" width="0.1524" layer="91"/>
@@ -3539,13 +3527,13 @@
 <wire x1="180.34" y1="10.16" x2="165.1" y2="10.16" width="0.1524" layer="91"/>
 <label x="165.1" y="10.16" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="1"/>
+<wire x1="15.24" y1="15.24" x2="-7.62" y2="15.24" width="0.1524" layer="91"/>
+<label x="-7.62" y="15.24" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SLAVE_9V" class="0">
-<segment>
-<pinref part="J2" gate="G$1" pin="3"/>
-<wire x1="15.24" y1="10.16" x2="-7.62" y2="10.16" width="0.1524" layer="91"/>
-<label x="-7.62" y="10.16" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="Q2" gate="G$1" pin="DC-"/>
 <wire x1="83.82" y1="33.02" x2="101.6" y2="33.02" width="0.1524" layer="91"/>
@@ -3557,18 +3545,23 @@
 <wire x1="134.62" y1="10.16" x2="119.38" y2="10.16" width="0.1524" layer="91"/>
 <label x="119.38" y="10.16" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="SLAVE_5V" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="2"/>
 <wire x1="-7.62" y1="12.7" x2="15.24" y2="12.7" width="0.1524" layer="91"/>
 <label x="-7.62" y="12.7" size="1.778" layer="95"/>
 </segment>
+</net>
+<net name="SLAVE_5V" class="0">
 <segment>
 <pinref part="R19" gate="G$1" pin="P$2"/>
 <wire x1="180.34" y1="60.96" x2="180.34" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="180.34" y1="63.5" x2="165.1" y2="63.5" width="0.1524" layer="91"/>
 <label x="165.1" y="63.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="3"/>
+<wire x1="15.24" y1="10.16" x2="-7.62" y2="10.16" width="0.1524" layer="91"/>
+<label x="-7.62" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+7V4V" class="0">
@@ -3682,15 +3675,15 @@
 <wire x1="35.56" y1="53.34" x2="35.56" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J2" gate="G$1" pin="1"/>
-<wire x1="15.24" y1="15.24" x2="-7.62" y2="15.24" width="0.1524" layer="91"/>
-<label x="-7.62" y="15.24" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="R15" gate="G$1" pin="P$2"/>
 <wire x1="134.62" y1="60.96" x2="134.62" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="63.5" x2="119.38" y2="63.5" width="0.1524" layer="91"/>
 <label x="119.38" y="63.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J2" gate="G$1" pin="4"/>
+<wire x1="-7.62" y1="7.62" x2="15.24" y2="7.62" width="0.1524" layer="91"/>
+<label x="-7.62" y="7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$41" class="0">
@@ -3706,6 +3699,13 @@
 <pinref part="R44" gate="G$1" pin="P$2"/>
 <wire x1="30.48" y1="-30.48" x2="40.64" y2="-30.48" width="0.1524" layer="91"/>
 <label x="33.02" y="-30.48" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SLAVE_BUZZER" class="0">
+<segment>
+<pinref part="J2" gate="G$1" pin="8"/>
+<wire x1="-7.62" y1="-2.54" x2="15.24" y2="-2.54" width="0.1524" layer="91"/>
+<label x="-7.62" y="-2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
