@@ -1495,6 +1495,8 @@
 <part name="C9" library="radio-tracker" deviceset="CAPACITOR" device="0603" value="10pF"/>
 <part name="GND12" library="radio-tracker" deviceset="GND" device=""/>
 <part name="RV1" library="radio-tracker" deviceset="PTC" device="0603" value="80mA"/>
+<part name="R7" library="radio-tracker" deviceset="RESISTOR" device="0603" value="10k"/>
+<part name="P+16" library="radio-tracker" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1901,6 +1903,13 @@
 <instance part="P+11" gate="G$1" x="30.48" y="-7.62" smashed="yes">
 <attribute name="VALUE" x="30.48" y="-5.08" size="1.778" layer="96" rot="R180" align="bottom-center"/>
 </instance>
+<instance part="R7" gate="G$1" x="78.74" y="-30.48" smashed="yes" rot="R90">
+<attribute name="NAME" x="76.2" y="-22.86" size="1.778" layer="95" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="83.82" y="-22.86" size="1.778" layer="96" rot="R90" align="bottom-center"/>
+</instance>
+<instance part="P+16" gate="G$1" x="78.74" y="-10.16" smashed="yes">
+<attribute name="VALUE" x="78.74" y="-7.62" size="1.778" layer="96" rot="R180" align="bottom-center"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -1950,6 +1959,11 @@
 <wire x1="43.18" y1="17.78" x2="43.18" y2="7.62" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="4"/>
 <wire x1="43.18" y1="7.62" x2="66.04" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="P+16" gate="G$1" pin="+3V3"/>
+<pinref part="R7" gate="G$1" pin="P$2"/>
+<wire x1="78.74" y1="-12.7" x2="78.74" y2="-15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SDN" class="0">
@@ -2017,6 +2031,12 @@
 <pinref part="J1" gate="G$1" pin="9"/>
 <wire x1="66.04" y1="-5.08" x2="48.26" y2="-5.08" width="0.1524" layer="91"/>
 <label x="48.26" y="-5.08" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R7" gate="G$1" pin="P$1"/>
+<wire x1="78.74" y1="-30.48" x2="78.74" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="-33.02" x2="66.04" y2="-33.02" width="0.1524" layer="91"/>
+<label x="66.04" y="-33.02" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="OC1B" class="0">
