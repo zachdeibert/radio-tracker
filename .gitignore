@@ -457,7 +457,6 @@ FodyWeavers.xsd
 *.pdb
 
 # Kernel Module Compile Results
-*.mod*
 *.cmd
 .tmp_versions/
 modules.order
@@ -481,3 +480,14 @@ dkms.conf
 # Dependency directories (remove the comment below to include it)
 # vendor/
 
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps

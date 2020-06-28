@@ -1,0 +1,5 @@
+radio-tracker
+radio-tracker.exe
+*.vcxproj
+*.vcxproj.filters
+*.sln
