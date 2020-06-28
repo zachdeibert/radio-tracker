@@ -35,8 +35,8 @@ func (b BufferedImage) Bounds() image.Rectangle {
 			Y: 0,
 		},
 		Max: image.Point{
-			X: b.Width,
-			Y: b.Height,
+			X: b.Width - 1,
+			Y: b.Height - 1,
 		},
 	}
 }
@@ -45,7 +45,7 @@ func (b BufferedImage) Bounds() image.Rectangle {
 func (b BufferedImage) At(x, y int) color.Color {
 	x -= b.OffsetX
 	y -= b.OffsetY
-	if x < 0 || x > len(b.Data) || y < 0 || y > len(b.Data[x]) {
+	if x < 0 || x >= len(b.Data) || y < 0 || y >= len(b.Data[x]) {
 		return ColorNil
 	}
 	return b.Data[x][y]

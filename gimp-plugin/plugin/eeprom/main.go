@@ -1,29 +1,42 @@
 package eeprom
 
 import (
-	"image/png"
+	"fmt"
 	"os"
 
 	"github.com/zachdeibert/radio-tracker/gimp-plugin/plugin"
 	"github.com/zachdeibert/radio-tracker/gimp-plugin/plugin/gimp"
 )
 
-func saveFile(proc plugin.Procedure, params []plugin.Param) []plugin.Param {
-	plugin.ShowMessage("Filename: %s", params[3].StringVal)
-	im := gimp.Image(params[1].IntVal)
-	for i, l := range im.Layers() {
-		if i == 0 {
-			img := l.Buffer()
-			f, err := os.Create(params[3].StringVal)
-			if err != nil {
-				panic(err)
-			}
-			defer f.Close()
-			if err = png.Encode(f, img); err != nil {
-				panic(err)
-			}
-		}
+func writeBinaryFile(filename string, sprites []sprite) {
+	f, err := os.Create(filename)
+	if err != nil {
+		panic(err)
 	}
+	defer f.Close()
+	for _, s := range sprites {
+		f.Write(s.encode())
+	}
+}
+
+func writeHeaderFile(filename string, sprites []sprite) {
+	f, err := os.Create(filename)
+	if err != nil {
+		panic(err)
+	}
+	defer f.Close()
+	writeHeader(f, sprites)
+}
+
+func saveFile(proc plugin.Procedure, params []plugin.Param) []plugin.Param {
+	im := gimp.Image(params[1].IntVal)
+	layers := im.Layers()
+	sprites := make([]sprite, len(layers))
+	for i, l := range layers {
+		sprites[i].decode(l.Buffer(), l.Name())
+	}
+	writeBinaryFile(params[3].StringVal, sprites)
+	writeHeaderFile(fmt.Sprintf("%s.h", params[3].StringVal), sprites)
 	return []plugin.Param{
 		{
 			Type:   plugin.ParamTypeStatus,

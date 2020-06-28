@@ -3,3 +3,6 @@ radio-tracker.exe
 *.vcxproj
 *.vcxproj.filters
 *.sln
+*.xcf
+*.bin
+*.bin.h

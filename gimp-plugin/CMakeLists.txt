@@ -53,8 +53,12 @@ endif()
 set(PLUGIN_INSTALL_DIR "${INSTALL_PATH}/radio-tracker")
 
 set(SOURCES
+    plugin/eeprom/block.go
+    plugin/eeprom/header.go
     plugin/eeprom/main.go
+    plugin/eeprom/pixel.go
     plugin/eeprom/procedure.go
+    plugin/eeprom/sprite.go
     plugin/gimp/bufferedImage.go
     plugin/gimp/image.go
     plugin/gimp/layer.go
